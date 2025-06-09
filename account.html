@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+  <title>Account/Billing</title>
+</head>
+<body>
+  <div class="row mb-3">
+    <div class="col-md-2">
+      <div class="bg-light p-3" style="width: 250px; min-height: 100vh;">
+        <!-- mail logo -->
+        <div class="text-center mb-4">
+          <img src="mail.webp" alt="mail" style="width: 40px;" />
+        </div>
+        <!-- accordion -->
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#pagesMenu" role="button">Pages</a>
+            <div class="collapse show" id="pagesMenu">
+              <ul class="nav flex-column ms-3">
+                <li><a href="#" class="nav-link">Profile</a></li>
+                <li><a href="#" class="nav-link">Users</a></li>
+                <li>
+                  <a href="#accountMenu" class="nav-link" data-bs-toggle="collapse">Account</a>
+                  <div class="collapse show" id="accountMenu">
+                    <a href="#" class="nav-link ms-3">Setting</a>
+                    <a href="#" class="nav-link ms-3">Billing</a>
+                    <a href="#" class="nav-link ms-3">Security</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Charts</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Chat</a></li>
+        </ul>
+        <div class="mt-auto text-center pt-3">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <img src="Anita.avif" alt="User" style="width: 30px; border-radius: 50%;" />
+            <span><strong>Anita Cruz</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10">
+      <section class="bg-light p-4">
+        <!-- account section -->
+        <div class="container">
+          <div class="d-flex align-items-center flex-wrap gap-5">
+            <h3 class="text-info mb-0">Account/Billing</h3>
+            <div class="position-relative" style="max-width: 300px; width: 100%;">
+              <input type="text" class="form-control rounded-pill pe-5" placeholder="Search anything here" />
+              <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="mt-4">Plans and Billings</h5>
+            <p class="text-secondary">Manage your billings here</p>
+          </div>
+
+          <div class="d-flex justify-content-between flex-wrap mt-4">
+            <!-- Basic Plan Card -->
+            <div class="card p-3 me-3 d-flex flex-column justify-content-between" style="width: 48%; height: 100%;">
+              <div class="flex-grow-1">
+                <h5>Basic Plan</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="text-muted mb-1">Our most popular plan for small teams.</p>
+                  <h4 class="mb-1 text-dark">$20</h4>
+                  <p class="text-muted">per month</p>
+                </div>
+                
+                <div class="d-flex">
+                  <img src="photo1.avif" class="rounded-circle me-1" width="32" height="32" />
+                  <img src="photo 2.avif" class="rounded-circle me-1" width="32" height="32" />
+                  <img src="photo 3.avif" class="rounded-circle me-1" width="32" height="32" />
+                  <img src="photo 4.avif" class="rounded-circle me-1" width="32" height="32" />
+                  <img src="photo 5.avif" class="rounded-circle me-1" width="32" height="32" />
+                </div>
+              </div>
+              <!-- Upgrade button bottom-right -->
+              <div class="text-end mt-3">
+                <a href="#" class="text-primary">Upgrade plan ▼</a>
+              </div>
+            </div>
+
+            <!-- Payment Method Card -->
+            <div class="card p-3" style="width: 48%;">
+              <h5>Payment Method</h5>
+              <p class="text-muted">Change how you pay for your plan</p>
+              <div class="d-flex justify-content-between align-items-center border rounded p-2">
+                <div>
+                  <strong>VISA</strong> ending in 6789<br />
+                  <small class="text-muted">Expiry 01/2028</small>
+                </div>
+                <button class="btn btn-outline-primary btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing history -->
+          <div class="card p-4 mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h5 class="mb-0">Billing history</h5>
+                <small class="text-muted">Download your previous plan receipts and usage details.</small>
+              </div>
+              <button class="btn btn-primary btn-sm">Download all</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Billing</th>
+                    <th>Billing Date</th>
+                    <th>Amount</th>
+                    <th>Plan</th>
+                    <th>Users</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <!--row 1-->
+                  <tr>
+                    <td><i class="bi bi-file-earmark-text me-2"></i> Billing #780-Dec 2022 <span class="text-success">Paid</span></td>
+                    <td>Dec 23, 2022</td>
+                    <td>USD $120.00</td>
+                    <td>Basic plan</td>
+                    <td>15 Users</td>
+                    <td><button class="btn btn-outline-dark btn-sm">Download all</button></td>
+                  </tr>
+                  <!--row 2-->
+                   <tr>
+                    <td><i class="bi bi-file-earmark-text me-2"></i> Billing #345-Dec 2022 <span class="text-success">Paid</span></td>
+                    <td>Nov 12, 2022</td>
+                    <td>USD $22.00</td>
+                    <td>Basic plan</td>
+                    <td>56 Users</td>
+                    <td><button class="btn btn-outline-dark btn-sm">Download all</button></td>
+                  </tr>
+                  <!--row 3-->
+                   <tr>
+                    <td><i class="bi bi-file-earmark-text me-2"></i> Billing #213-Dec 2022 <span class="text-success">Paid</span></td>
+                    <td>Oct 09, 2022</td>
+                    <td>USD $80.00</td>
+                    <td>Basic plan</td>
+                    <td>90 Users</td>
+                    <td><button class="btn btn-outline-dark btn-sm">Download all</button></td>
+                  </tr>
+                  <!--row 4-->
+                   <tr>
+                    <td><i class="bi bi-file-earmark-text me-2"></i> Billing #324-Dec 2022 <span class="text-success">Paid</span></td>
+                    <td>Aug 03, 2022</td>
+                    <td>USD $12.00</td>
+                    <td>Basic plan</td>
+                    <td>22 Users</td>
+                    <td><button class="btn btn-outline-dark btn-sm">Download all</button></td>
+                  </tr>
+                  <!--row 5-->
+                   <tr>
+                    <td><i class="bi bi-file-earmark-text me-2"></i> Billing #123-Dec 2022 <span class="text-success">Paid</span></td>
+                    <td>July 13, 2022</td>
+                    <td>USD $67.00</td>
+                    <td>Basic plan</td>
+                    <td>23 Users</td>
+                    <td><button class="btn btn-outline-dark btn-sm">Download all</button></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
